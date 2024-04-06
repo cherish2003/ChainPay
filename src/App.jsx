@@ -46,6 +46,47 @@ function App() {
             }
           />
         </Route>
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/selectMerchant"
+            element={
+              <>
+                <SelectMerchant />
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
+          />
+        </Route>
+
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/integrate"
+            element={
+              <>
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
+          />
+        </Route>
+
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/selectMerchant" element={<SelectMerchant />}></Route>
 
