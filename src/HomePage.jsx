@@ -6,23 +6,19 @@ import Footer from "./components/Footer";
 
 import DashBoardFeature from "./components/DashBoardFeature";
 
-
-const HomePage= () => {
+const HomePage = () => {
   return (
     <>
-
-
       <Navbar />
-     
+
       <div className="max-w-7xl bg-black text-white mx-auto pt-20 px-6">
         <HeroSection />
-       
 
         <FeatureSection />
 
-        <DashBoardFeature/>
-        <Workflow />
-      
+        <DashBoardFeature />
+        {/* <Workflow /> */}
+
         <Footer />
       </div>
     </>
