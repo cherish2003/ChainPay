@@ -11,11 +11,6 @@ import { AreaTable } from "./components";
 import HomePage from "./HomePage";
 import SelectMerchant from "./components/dasboardFunc/SelectMerchant";
 
-
-
-
-
-
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -30,32 +25,32 @@ function App() {
 
   return (
     <>
-      
-        <Routes>
-          <Route element={<BaseLayout />}>
-            <Route path="/dashboard" element={<>
-              <Dashboard />
-        <button
-          type="button"
-          className="theme-toggle-btn"
-          onClick={toggleTheme}
-        >
-          <img
-            className="theme-icon"
-            src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+      <Routes>
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/dashboard"
+            element={
+              <>
+                <Dashboard />
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
           />
-        </button></>} />
-            
+        </Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/selectMerchant" element={<SelectMerchant />}></Route>
 
-          </Route>
-          <Route path="/" element={<HomePage/>}></Route>
-          <Route path="/selectMerchant" element={<SelectMerchant/>}></Route>
-    
-            <Route path="*" element={<PageNotFound />} />
-          
-        </Routes>
-
-      
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
     </>
   );
 }

@@ -6,7 +6,9 @@ import Footer from "./components/Footer";
 
 import DashBoardFeature from "./components/DashBoardFeature";
 
+
 const HomePage = () => {
+
   return (
     <>
       <Navbar />
