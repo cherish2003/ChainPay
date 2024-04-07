@@ -57,12 +57,6 @@ const HeroSection = () => {
         and safety of payments redefined.
       </p>
       <div className="flex justify-center my-10">
-        <Link
-          to="/dashboard"
-          className=" animate-bounce focus:animate-none hover:animate-none tracking-wide text-white bg-gradient-to-r from-blue-500 to-blue-800 py-3 px-4 mx-3 rounded-md"
-        >
-          DashBoard
-        </Link>
         <button
           type="submit"
           className="animate-rotate-x py-3 px-4 mx-3 rounded-md border"
@@ -70,12 +64,6 @@ const HeroSection = () => {
         >
           Connect Wallet
         </button>
-        <a
-          href="#"
-          className="animate-rotate-x py-3 px-4 mx-3 rounded-md border"
-        >
-          Connect das
-        </a>
       </div>
     </div>
   );

@@ -101,49 +101,11 @@ const Sidebar = ({ child }) => {
                   <span className="menu-link-text">Home</span>
                 </Link>
               </li>
-              <li className="transform transition duration-300 hover:scale-105 menu-item">
-                <Link to="/" className="menu-link">
-                  <span className="menu-link-icon">
-                    <MdOutlinePeople size={20} />
-                  </span>
-                  <span className="menu-link-text">Customer</span>
-                </Link>
-              </li>
-              <li className="transform transition duration-300 hover:scale-105 menu-item">
-                <Link to="/" className="menu-link">
-                  <span className="menu-link-icon">
-                    <MdOutlineMessage size={18} />
-                  </span>
-                  <span className="menu-link-text">Messages</span>
-                </Link>
-              </li>
+              
             </ul>
           </div>
 
-          <div className="sidebar-menu sidebar-menu2">
-            <ul className="menu-list">
-              <li className="menu-item ">
-                <Link to="/" className="menu-link">
-                  <span className="menu-link-icon">
-                    <MdOutlineSettings size={20} />
-                  </span>
-                  <span className="transform transition duration-300 hover:scale-105 menu-link-text">
-                    Settings
-                  </span>
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/" className="menu-link">
-                  <span className="menu-link-icon">
-                    <MdOutlineLogout size={20} />
-                  </span>
-                  <span className="transform transition duration-300 hover:scale-105 menu-link-text">
-                    Logout
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </div>
+        
         </div>
       </nav>
       {child}
