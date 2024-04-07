@@ -1,10 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Web3 from "web3";
 import TokenTransferorABI from "../Contracts/TokenTransferor_compData.json"; // Load your contract's ABI
+import { WalletContext } from "../context/WalletContext.jsx"; // Load your contract's ABI
 // import "./App.css";
 
 const HeroSection = () => {
+  const { setWallet } = useContext(WalletContext);
   const Navigate = useNavigate();
   const [web3, setWeb3] = useState(null);
   const [account, setAccount] = useState(null);
@@ -27,6 +29,7 @@ const HeroSection = () => {
         // Retrieve user's account address
         const accounts = await web3Instance.eth.getAccounts();
         setAccount(accounts[0]);
+        setWallet(accounts[0]);
         // const ac= await
       } else {
         // MetaMask is not installed or not accessible

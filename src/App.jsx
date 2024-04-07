@@ -10,6 +10,14 @@ import { Dashboard, PageNotFound } from "./screens";
 import { AreaTable } from "./components";
 import HomePage from "./HomePage";
 import SelectMerchant from "./components/dasboardFunc/SelectMerchant";
+import DumCOm from "./components/DumCom";
+import BlockTable from "./components/dasboardFunc/BlockTable";
+import ContractEvents from "./components/getLastesTrans";
+import PaymentIntegration from "./components/dasboardFunc/PaymentPages/PaymentIntegration";
+import PaymentFlow from "./components/dasboardFunc/PaymentPages/PaymentFlow";
+import LinkPage from "../src/components/dasboardFunc/PaymentPages/Linkpage";
+import EthPage from "../src/components/dasboardFunc/PaymentPages/EthPage";
+import TokenPay from "../src/components/dasboardFunc/PaymentPages/TokenPay";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -52,6 +60,7 @@ function App() {
             element={
               <>
                 <SelectMerchant />
+                <BlockTable />
                 <button
                   type="button"
                   className="theme-toggle-btn"
@@ -86,9 +95,116 @@ function App() {
             }
           />
         </Route>
+        {/* //adding here */}
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/webIntegration"
+            element={
+              <>
+                <PaymentIntegration />
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
+          />
+        </Route>
 
+        {/* adding paymentFlowHere */}
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/paymentMethod"
+            element={
+              <>
+                <PaymentFlow />
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
+          />
+        </Route>
+
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/payment-link"
+            element={
+              <>
+                <LinkPage />
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
+          />
+        </Route>
+
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/payment-eth"
+            element={
+              <>
+                <EthPage />
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
+          />
+        </Route>
+
+        <Route element={<BaseLayout />}>
+          <Route
+            path="/payment-token"
+            element={
+              <>
+                <TokenPay />
+                <button
+                  type="button"
+                  className="theme-toggle-btn"
+                  onClick={toggleTheme}
+                >
+                  <img
+                    className="theme-icon"
+                    src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
+                  />
+                </button>
+              </>
+            }
+          />
+        </Route>
         <Route path="/" element={<HomePage />}></Route>
+        <Route path="/dum" element={<DumCOm />}></Route>
         <Route path="/selectMerchant" element={<SelectMerchant />}></Route>
+        <Route path="/xyz" element={ContractEvents}></Route>
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

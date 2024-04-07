@@ -61,7 +61,7 @@ const Sidebar = ({ child }) => {
           <div className="sidebar-menu">
             <ul className="menu-list">
               <li className="menu-item transform transition duration-300 hover:scale-105">
-                <Link to="/" className="menu-link active">
+                <Link to="/dashboard" className="menu-link active">
                   <span className="menu-link-icon">
                     <MdOutlineGridView size={18} />
                   </span>
@@ -78,7 +78,7 @@ const Sidebar = ({ child }) => {
                 </Link>
               </li>
               <li className=" transform transition duration-300 hover:scale-105 menu-item">
-                <Link to="/" className="menu-link">
+                <Link to="/paymentMethod" className="menu-link">
                   <span className="menu-link-icon">
                     <MdOutlineAttachMoney size={20} />
                   </span>
@@ -86,11 +86,11 @@ const Sidebar = ({ child }) => {
                 </Link>
               </li>
               <li className=" transform transition duration-300 hover:scale-105 menu-item">
-                <Link to="/" className="menu-link">
+                <Link to="/webINtegration" className="menu-link">
                   <span className="menu-link-icon">
                     <MdOutlineCurrencyExchange size={18} />
                   </span>
-                  <span className="menu-link-text">Transactions</span>
+                  <span className="menu-link-text">Integrate</span>
                 </Link>
               </li>
               <li className=" transform transition duration-300 hover:scale-105 menu-item">
@@ -98,7 +98,7 @@ const Sidebar = ({ child }) => {
                   <span className="menu-link-icon">
                     <MdOutlineShoppingBag size={20} />
                   </span>
-                  <span className="menu-link-text">Products</span>
+                  <span className="menu-link-text">Home</span>
                 </Link>
               </li>
               <li className="transform transition duration-300 hover:scale-105 menu-item">

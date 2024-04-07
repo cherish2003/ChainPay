@@ -1,7 +1,7 @@
 import Cards from "../Cards/Cards";
 import AreaCard from "./AreaCard";
 import "./AreaCards.scss";
-import {QRCodeSVG} from 'qrcode.react';
+import { QRCodeSVG } from "qrcode.react";
 
 const AreaCards = () => {
   return (
@@ -11,44 +11,26 @@ const AreaCards = () => {
         percentFillValue={80}
         cardInfo={{
           title: "Todays Transactions",
-          value: "$20.4K",
-          text: "We have sold 123 items.",
+          value: "0",
+          text: "",
         }}
       />
 
-<div className="progress-bar  display-flex">
-      <div className="progress-bar-info">
-        
-    
-      </div>
-      <div className="progress-bar-list ">
-      <Cards/>
-      </div>
-    </div>
-      
-
-        
-    <div className="progress-bar ">
-      <div className="progress-bar-info">
-        
-        
-      </div>
-      <div className="progress-bar-list">
-
-       
-
-        <div className="flex flex-row  pl-20 pt-4">
-          <QRCodeSVG
-          
-          size={170}
-          value="https://reactjs.org/" />
+      <div className="progress-bar  display-flex">
+        <div className="progress-bar-info"></div>
+        <div className="progress-bar-list ">
+          <Cards />
         </div>
-        
-        
-        
-      
       </div>
-    </div>
+{/* 
+      <div className="progress-bar ">
+        <div className="progress-bar-info"></div>
+        <div className="progress-bar-list">
+          <div className="flex flex-row  pl-20 pt-4">
+            <QRCodeSVG size={170} value="https://reactjs.org/" />
+          </div>
+        </div>
+      </div> */}
     </section>
   );
 };

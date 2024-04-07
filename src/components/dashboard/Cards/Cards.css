@@ -64,3 +64,8 @@
       grid-column-end: 3;
     }
   }
+
+.merchant-card{
+  height: 30px;
+  width: 30px;
+}

@@ -7,6 +7,9 @@
 
   .area-top-title {
     color: var(--text-color-inverted);
+    // font-size: larger;
+    font-size: 45px;
+    font-weight: 600;
   }
 
   .area-top-l {
@@ -16,6 +19,7 @@
   }
 
   .sidebar-open-btn {
+    background-color: red;
     display: inline-flex;
     align-items: center;
     display: none;
